@@ -1,0 +1,472 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		195972431B5F30D500382BB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972421B5F30D500382BB1 /* AppDelegate.swift */; };
+		195972451B5F30D500382BB1 /* SingleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972441B5F30D500382BB1 /* SingleGameViewController.swift */; };
+		195972481B5F30D500382BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195972461B5F30D500382BB1 /* Main.storyboard */; };
+		1959724A1B5F30D500382BB1 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 195972491B5F30D500382BB1 /* Images.xcassets */; };
+		1959724D1B5F30D500382BB1 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1959724B1B5F30D500382BB1 /* LaunchScreen.xib */; };
+		195972591B5F30D500382BB1 /* boggleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972581B5F30D500382BB1 /* boggleTests.swift */; };
+		195972631B5F456E00382BB1 /* WordBoardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972621B5F456E00382BB1 /* WordBoardView.swift */; };
+		195972651B5F53A900382BB1 /* dictionary.txt in Resources */ = {isa = PBXBuildFile; fileRef = 195972641B5F53A900382BB1 /* dictionary.txt */; };
+		195972671B5F53BC00382BB1 /* BoggleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972661B5F53BC00382BB1 /* BoggleGame.swift */; };
+		1959726B1B60CBB300382BB1 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1959726A1B60CBB300382BB1 /* MenuViewController.swift */; };
+		195972CD1B63FDE300382BB1 /* MultiGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972CC1B63FDE300382BB1 /* MultiGameViewController.swift */; };
+		195972D01B63FE1E00382BB1 /* GameDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972CE1B63FE1E00382BB1 /* GameDelegate.swift */; };
+		195972D11B63FE1E00382BB1 /* GameManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972CF1B63FE1E00382BB1 /* GameManager.swift */; };
+		195972D71B64004B00382BB1 /* SingleBoggleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972D61B64004B00382BB1 /* SingleBoggleGame.swift */; };
+		195972D91B64007900382BB1 /* MultiBoggleGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972D81B64007900382BB1 /* MultiBoggleGame.swift */; };
+		195972DB1B64016F00382BB1 /* BoggleDictionary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972DA1B64016F00382BB1 /* BoggleDictionary.swift */; };
+		195972DD1B6405C000382BB1 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972DC1B6405C000382BB1 /* Utils.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		195972531B5F30D500382BB1 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 195972351B5F30D500382BB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1959723C1B5F30D500382BB1;
+			remoteInfo = boggle;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		1959723D1B5F30D500382BB1 /* boggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		195972411B5F30D500382BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195972421B5F30D500382BB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		195972441B5F30D500382BB1 /* SingleGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SingleGameViewController.swift; sourceTree = "<group>"; };
+		195972471B5F30D500382BB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		195972491B5F30D500382BB1 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		1959724C1B5F30D500382BB1 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.xib; name = Base; path = Base.lproj/LaunchScreen.xib; sourceTree = "<group>"; };
+		195972521B5F30D500382BB1 /* boggleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = boggleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		195972571B5F30D500382BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		195972581B5F30D500382BB1 /* boggleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boggleTests.swift; sourceTree = "<group>"; };
+		195972621B5F456E00382BB1 /* WordBoardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WordBoardView.swift; sourceTree = "<group>"; };
+		195972641B5F53A900382BB1 /* dictionary.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = dictionary.txt; sourceTree = "<group>"; };
+		195972661B5F53BC00382BB1 /* BoggleGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoggleGame.swift; sourceTree = "<group>"; };
+		1959726A1B60CBB300382BB1 /* MenuViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		195972CC1B63FDE300382BB1 /* MultiGameViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiGameViewController.swift; sourceTree = "<group>"; };
+		195972CE1B63FE1E00382BB1 /* GameDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameDelegate.swift; sourceTree = "<group>"; };
+		195972CF1B63FE1E00382BB1 /* GameManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameManager.swift; sourceTree = "<group>"; };
+		195972D61B64004B00382BB1 /* SingleBoggleGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleBoggleGame.swift; sourceTree = "<group>"; };
+		195972D81B64007900382BB1 /* MultiBoggleGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MultiBoggleGame.swift; sourceTree = "<group>"; };
+		195972DA1B64016F00382BB1 /* BoggleDictionary.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BoggleDictionary.swift; sourceTree = "<group>"; };
+		195972DC1B6405C000382BB1 /* Utils.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		1959723A1B5F30D500382BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1959724F1B5F30D500382BB1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		195972341B5F30D500382BB1 = {
+			isa = PBXGroup;
+			children = (
+				1959723F1B5F30D500382BB1 /* boggle */,
+				195972551B5F30D500382BB1 /* boggleTests */,
+				1959723E1B5F30D500382BB1 /* Products */,
+				195972641B5F53A900382BB1 /* dictionary.txt */,
+			);
+			sourceTree = "<group>";
+		};
+		1959723E1B5F30D500382BB1 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				1959723D1B5F30D500382BB1 /* boggle.app */,
+				195972521B5F30D500382BB1 /* boggleTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		1959723F1B5F30D500382BB1 /* boggle */ = {
+			isa = PBXGroup;
+			children = (
+				195972421B5F30D500382BB1 /* AppDelegate.swift */,
+				195972441B5F30D500382BB1 /* SingleGameViewController.swift */,
+				195972CC1B63FDE300382BB1 /* MultiGameViewController.swift */,
+				195972D61B64004B00382BB1 /* SingleBoggleGame.swift */,
+				195972D81B64007900382BB1 /* MultiBoggleGame.swift */,
+				195972DA1B64016F00382BB1 /* BoggleDictionary.swift */,
+				1959726A1B60CBB300382BB1 /* MenuViewController.swift */,
+				195972621B5F456E00382BB1 /* WordBoardView.swift */,
+				195972661B5F53BC00382BB1 /* BoggleGame.swift */,
+				195972CE1B63FE1E00382BB1 /* GameDelegate.swift */,
+				195972CF1B63FE1E00382BB1 /* GameManager.swift */,
+				195972DC1B6405C000382BB1 /* Utils.swift */,
+				195972461B5F30D500382BB1 /* Main.storyboard */,
+				195972491B5F30D500382BB1 /* Images.xcassets */,
+				1959724B1B5F30D500382BB1 /* LaunchScreen.xib */,
+				195972401B5F30D500382BB1 /* Supporting Files */,
+			);
+			path = boggle;
+			sourceTree = "<group>";
+		};
+		195972401B5F30D500382BB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				195972411B5F30D500382BB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		195972551B5F30D500382BB1 /* boggleTests */ = {
+			isa = PBXGroup;
+			children = (
+				195972581B5F30D500382BB1 /* boggleTests.swift */,
+				195972561B5F30D500382BB1 /* Supporting Files */,
+			);
+			path = boggleTests;
+			sourceTree = "<group>";
+		};
+		195972561B5F30D500382BB1 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				195972571B5F30D500382BB1 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		1959723C1B5F30D500382BB1 /* boggle */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1959725C1B5F30D500382BB1 /* Build configuration list for PBXNativeTarget "boggle" */;
+			buildPhases = (
+				195972391B5F30D500382BB1 /* Sources */,
+				1959723A1B5F30D500382BB1 /* Frameworks */,
+				1959723B1B5F30D500382BB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = boggle;
+			productName = boggle;
+			productReference = 1959723D1B5F30D500382BB1 /* boggle.app */;
+			productType = "com.apple.product-type.application";
+		};
+		195972511B5F30D500382BB1 /* boggleTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1959725F1B5F30D500382BB1 /* Build configuration list for PBXNativeTarget "boggleTests" */;
+			buildPhases = (
+				1959724E1B5F30D500382BB1 /* Sources */,
+				1959724F1B5F30D500382BB1 /* Frameworks */,
+				195972501B5F30D500382BB1 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				195972541B5F30D500382BB1 /* PBXTargetDependency */,
+			);
+			name = boggleTests;
+			productName = boggleTests;
+			productReference = 195972521B5F30D500382BB1 /* boggleTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		195972351B5F30D500382BB1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = "Bin Bo";
+				TargetAttributes = {
+					1959723C1B5F30D500382BB1 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					195972511B5F30D500382BB1 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 1959723C1B5F30D500382BB1;
+					};
+				};
+			};
+			buildConfigurationList = 195972381B5F30D500382BB1 /* Build configuration list for PBXProject "boggle" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 195972341B5F30D500382BB1;
+			productRefGroup = 1959723E1B5F30D500382BB1 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				1959723C1B5F30D500382BB1 /* boggle */,
+				195972511B5F30D500382BB1 /* boggleTests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		1959723B1B5F30D500382BB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195972481B5F30D500382BB1 /* Main.storyboard in Resources */,
+				1959724D1B5F30D500382BB1 /* LaunchScreen.xib in Resources */,
+				195972651B5F53A900382BB1 /* dictionary.txt in Resources */,
+				1959724A1B5F30D500382BB1 /* Images.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		195972501B5F30D500382BB1 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		195972391B5F30D500382BB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195972631B5F456E00382BB1 /* WordBoardView.swift in Sources */,
+				195972D91B64007900382BB1 /* MultiBoggleGame.swift in Sources */,
+				195972D11B63FE1E00382BB1 /* GameManager.swift in Sources */,
+				1959726B1B60CBB300382BB1 /* MenuViewController.swift in Sources */,
+				195972671B5F53BC00382BB1 /* BoggleGame.swift in Sources */,
+				195972DB1B64016F00382BB1 /* BoggleDictionary.swift in Sources */,
+				195972CD1B63FDE300382BB1 /* MultiGameViewController.swift in Sources */,
+				195972451B5F30D500382BB1 /* SingleGameViewController.swift in Sources */,
+				195972D71B64004B00382BB1 /* SingleBoggleGame.swift in Sources */,
+				195972D01B63FE1E00382BB1 /* GameDelegate.swift in Sources */,
+				195972431B5F30D500382BB1 /* AppDelegate.swift in Sources */,
+				195972DD1B6405C000382BB1 /* Utils.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		1959724E1B5F30D500382BB1 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				195972591B5F30D500382BB1 /* boggleTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		195972541B5F30D500382BB1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1959723C1B5F30D500382BB1 /* boggle */;
+			targetProxy = 195972531B5F30D500382BB1 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		195972461B5F30D500382BB1 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				195972471B5F30D500382BB1 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		1959724B1B5F30D500382BB1 /* LaunchScreen.xib */ = {
+			isa = PBXVariantGroup;
+			children = (
+				1959724C1B5F30D500382BB1 /* Base */,
+			);
+			name = LaunchScreen.xib;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		1959725A1B5F30D500382BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		1959725B1B5F30D500382BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		1959725D1B5F30D500382BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = boggle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		1959725E1B5F30D500382BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = boggle/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		195972601B5F30D500382BB1 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = boggleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/boggle.app/boggle";
+			};
+			name = Debug;
+		};
+		195972611B5F30D500382BB1 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = boggleTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/boggle.app/boggle";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		195972381B5F30D500382BB1 /* Build configuration list for PBXProject "boggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1959725A1B5F30D500382BB1 /* Debug */,
+				1959725B1B5F30D500382BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1959725C1B5F30D500382BB1 /* Build configuration list for PBXNativeTarget "boggle" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				1959725D1B5F30D500382BB1 /* Debug */,
+				1959725E1B5F30D500382BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1959725F1B5F30D500382BB1 /* Build configuration list for PBXNativeTarget "boggleTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				195972601B5F30D500382BB1 /* Debug */,
+				195972611B5F30D500382BB1 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 195972351B5F30D500382BB1 /* Project object */;
+}
