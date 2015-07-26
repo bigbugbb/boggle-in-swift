@@ -119,7 +119,7 @@ class BaseBoggleGame: GameProtocol {
                     // get all selected charaters and build them into a word,
                     // and try to look up the word in the dictionary.
                     // if the word is found, we are happy, otherwise play the error sound
-                    let word = wordFromSelections()
+                    let word = wordFromSelections().lowercaseString
                     if dict.contains(word) && !contains(foundWords, word) {
                         updateScoreForWord(word)
                         foundWords.append(word)
