@@ -63,11 +63,11 @@ class BaseBoggleGame: GameProtocol {
     
     var delegate: GameDelegate?
     
-    let FREQUENCY = [
+    let frequency = [
         326395, 73910, 169177, 129257, 437303, 46188, 98557, 104164, 355476, 6416, 33829, 215219, 119469,
         285562, 280921, 127706, 6784, 280998, 326647, 262874, 146434, 37786, 27811, 11837, 74044, 17531
     ]
-    let SUM_OF_CHARS = 4002295
+    let sumOfChars = 4002295
     
     func start() {
         shuffle()
@@ -92,14 +92,14 @@ class BaseBoggleGame: GameProtocol {
         func makeLetter() -> Int8 {
             var l = 0
             var r = 0
-            let t = Int((Float(arc4random()) / Float(UINT32_MAX)) * Float(SUM_OF_CHARS))
+            let t = Int((Float(arc4random()) / Float(UINT32_MAX)) * Float(sumOfChars))
             
             for var i = 0; i < 26; ++i {
-                r += FREQUENCY[i]
+                r += frequency[i]
                 if l < t && t < r {
                     return Int8(i)
                 }
-                l += FREQUENCY[i]
+                l += frequency[i]
             }
             return 4 // add more probability on 'E'
         }
@@ -124,9 +124,9 @@ class BaseBoggleGame: GameProtocol {
                         updateScoreForWord(word)
                         foundWords.append(word)
                         selections.removeAll(keepCapacity: true)
-                        delegate?.gameDidPick(word, valid: true)
+                        delegate?.gameDidPick(word, isValid: true)
                     } else {
-                        delegate?.gameDidPick(word, valid: false)
+                        delegate?.gameDidPick(word, isValid: false)
                     }
                 } else {
                     // remove all selections after this one

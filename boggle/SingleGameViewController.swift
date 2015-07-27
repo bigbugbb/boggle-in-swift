@@ -23,7 +23,7 @@ class SingleGameViewController: UIViewController, UITableViewDataSource, GameDel
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        game = GameManager.instance.createSingleGame(4)
+        game = GameManager.instance.createSingleGame(dimen: 4)
         game.delegate = self
         
         wordBoard.layer.borderColor   = UIColor.grayColor().CGColor
@@ -123,8 +123,8 @@ class SingleGameViewController: UIViewController, UITableViewDataSource, GameDel
         return cell
     }
     
-    func gameDidPick(word: String, valid: Bool) {
-        if valid {
+    func gameDidPick(word: String, isValid: Bool) {
+        if isValid {
             wordsView.reloadData()
             scoreView.text = String(game.score)
         }

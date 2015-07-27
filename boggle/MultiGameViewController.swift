@@ -16,7 +16,7 @@ class MultiGameViewController: UIViewController, GameDelegate {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        game = GameManager.instance.createMultiGame(4)
+        game = GameManager.instance.createMultiGame(dimen: 4)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +31,7 @@ class MultiGameViewController: UIViewController, GameDelegate {
         })
     }
     
-    func gameDidPick(word: String, valid: Bool) {
+    func gameDidPick(word: String, isValid: Bool) {
         
     }
     

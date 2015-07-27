@@ -9,6 +9,6 @@
 import Foundation
 
 protocol GameDelegate {
-    func gameDidPick(word: String, valid: Bool)
+    func gameDidPick(word: String, isValid: Bool)
     func gameDidTick(time: Int)
 }

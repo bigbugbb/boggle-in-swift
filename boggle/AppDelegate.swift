@@ -13,10 +13,24 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
 
-
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
-        // Override point for customization after application launch.
+        application.registerForRemoteNotifications()
+        let notificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let settings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
+        application.registerUserNotificationSettings(settings)
         return true
+    }
+
+    func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData?) {
+        println("Got token data! \(deviceToken)")
+    }
+
+    func application(application: UIApplication, didqFailToRegisterForRemoteNotificationsWithError error: NSError?) {
+        println("Couldn't register: \(error)")
+    }
+
+    func application(application: UIApplication!, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings?) {
+        // inspect notificationSettings to see what the user said!
     }
 
     func applicationWillResignActive(application: UIApplication) {
