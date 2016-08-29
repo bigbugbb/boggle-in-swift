@@ -72,18 +72,18 @@ class SingleGameViewController: UIViewController, UITableViewDataSource, GameDel
                 GameManager.instance.activeGame = nil
             })
         } else {
-            var alert = UIAlertController(title: "Exit Game", message: "Are you sure to exit the current game?", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Exit Game", message: "Are you sure to exit the current game?", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(alert, animated: true, completion: nil)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                println("Click of default button")
+                print("Click of default button")
                 self.dismissViewControllerAnimated(true, completion: { () -> Void in
                     GameManager.instance.activeGame = nil
                 })
             }))
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
-                println("Click of cancel button")
+                print("Click of cancel button")
                 self.game.resume()
             }))
         }
@@ -96,18 +96,18 @@ class SingleGameViewController: UIViewController, UITableViewDataSource, GameDel
             self.startGame()
             self.refreshDisplay()
         } else {
-            var alert = UIAlertController(title: "Restart Game", message: "Are you sure to drop this play?", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Restart Game", message: "Are you sure to drop this play?", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(alert, animated: true, completion: nil)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                println("Click of default button")
+                print("Click of default button")
                 self.stopGame()
                 self.startGame()
                 self.refreshDisplay()
             }))
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
-                println("Click of cancel button")
+                print("Click of cancel button")
                 self.game.resume()
             }))
         }
@@ -119,7 +119,7 @@ class SingleGameViewController: UIViewController, UITableViewDataSource, GameDel
     
     func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         let cell = UITableViewCell(style: UITableViewCellStyle.Default, reuseIdentifier: nil)
-        cell.textLabel?.text = game.foundWords.reverse()[indexPath.row]
+        cell.textLabel?.text = Array(game.foundWords.reverse())[indexPath.row]
         return cell
     }
     
@@ -135,17 +135,17 @@ class SingleGameViewController: UIViewController, UITableViewDataSource, GameDel
         if time <= 0 {
             stopGame()
             
-            var alert = UIAlertController(title: "Time is up!", message: "You've got \(game.score) score!\nWould you like to play again?", preferredStyle: UIAlertControllerStyle.Alert)
+            let alert = UIAlertController(title: "Time is up!", message: "You've got \(game.score) score!\nWould you like to play again?", preferredStyle: UIAlertControllerStyle.Alert)
             self.presentViewController(alert, animated: true, completion: nil)
             
             alert.addAction(UIAlertAction(title: "Ok", style: .Default, handler: { action in
-                println("Click of default button")
+                print("Click of default button")
                 self.startGame()
                 self.refreshDisplay()
             }))
             
             alert.addAction(UIAlertAction(title: "Cancel", style: .Cancel, handler: { action in
-                println("Click of cancel button")
+                print("Click of cancel button")
             }))
         }
     }

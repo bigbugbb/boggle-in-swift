@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		19320CDF1D149AAA001AD1B3 /* boggleUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19320CDE1D149AAA001AD1B3 /* boggleUITests.swift */; };
 		195972431B5F30D500382BB1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972421B5F30D500382BB1 /* AppDelegate.swift */; };
 		195972451B5F30D500382BB1 /* SingleGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195972441B5F30D500382BB1 /* SingleGameViewController.swift */; };
 		195972481B5F30D500382BB1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 195972461B5F30D500382BB1 /* Main.storyboard */; };
@@ -27,6 +28,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		19320CE11D149AAA001AD1B3 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 195972351B5F30D500382BB1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 1959723C1B5F30D500382BB1;
+			remoteInfo = boggle;
+		};
 		195972531B5F30D500382BB1 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = 195972351B5F30D500382BB1 /* Project object */;
@@ -37,6 +45,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		19320CDC1D149AAA001AD1B3 /* boggleUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = boggleUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		19320CDE1D149AAA001AD1B3 /* boggleUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = boggleUITests.swift; sourceTree = "<group>"; };
+		19320CE01D149AAA001AD1B3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1959723D1B5F30D500382BB1 /* boggle.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = boggle.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		195972411B5F30D500382BB1 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		195972421B5F30D500382BB1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -61,6 +72,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		19320CD91D149AAA001AD1B3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1959723A1B5F30D500382BB1 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -78,11 +96,21 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19320CDD1D149AAA001AD1B3 /* boggleUITests */ = {
+			isa = PBXGroup;
+			children = (
+				19320CDE1D149AAA001AD1B3 /* boggleUITests.swift */,
+				19320CE01D149AAA001AD1B3 /* Info.plist */,
+			);
+			path = boggleUITests;
+			sourceTree = "<group>";
+		};
 		195972341B5F30D500382BB1 = {
 			isa = PBXGroup;
 			children = (
 				1959723F1B5F30D500382BB1 /* boggle */,
 				195972551B5F30D500382BB1 /* boggleTests */,
+				19320CDD1D149AAA001AD1B3 /* boggleUITests */,
 				1959723E1B5F30D500382BB1 /* Products */,
 				195972641B5F53A900382BB1 /* dictionary.txt */,
 			);
@@ -93,6 +121,7 @@
 			children = (
 				1959723D1B5F30D500382BB1 /* boggle.app */,
 				195972521B5F30D500382BB1 /* boggleTests.xctest */,
+				19320CDC1D149AAA001AD1B3 /* boggleUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -148,6 +177,24 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		19320CDB1D149AAA001AD1B3 /* boggleUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 19320CE51D149AAA001AD1B3 /* Build configuration list for PBXNativeTarget "boggleUITests" */;
+			buildPhases = (
+				19320CD81D149AAA001AD1B3 /* Sources */,
+				19320CD91D149AAA001AD1B3 /* Frameworks */,
+				19320CDA1D149AAA001AD1B3 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				19320CE21D149AAA001AD1B3 /* PBXTargetDependency */,
+			);
+			name = boggleUITests;
+			productName = boggleUITests;
+			productReference = 19320CDC1D149AAA001AD1B3 /* boggleUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 		1959723C1B5F30D500382BB1 /* boggle */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 1959725C1B5F30D500382BB1 /* Build configuration list for PBXNativeTarget "boggle" */;
@@ -189,9 +236,15 @@
 		195972351B5F30D500382BB1 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftMigration = 0710;
+				LastSwiftUpdateCheck = 0730;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Bin Bo";
 				TargetAttributes = {
+					19320CDB1D149AAA001AD1B3 = {
+						CreatedOnToolsVersion = 7.3.1;
+						TestTargetID = 1959723C1B5F30D500382BB1;
+					};
 					1959723C1B5F30D500382BB1 = {
 						CreatedOnToolsVersion = 6.4;
 						DevelopmentTeam = 6X8MHCD9JX;
@@ -223,11 +276,19 @@
 			targets = (
 				1959723C1B5F30D500382BB1 /* boggle */,
 				195972511B5F30D500382BB1 /* boggleTests */,
+				19320CDB1D149AAA001AD1B3 /* boggleUITests */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		19320CDA1D149AAA001AD1B3 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		1959723B1B5F30D500382BB1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -249,6 +310,14 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		19320CD81D149AAA001AD1B3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				19320CDF1D149AAA001AD1B3 /* boggleUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		195972391B5F30D500382BB1 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -279,6 +348,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		19320CE21D149AAA001AD1B3 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 1959723C1B5F30D500382BB1 /* boggle */;
+			targetProxy = 19320CE11D149AAA001AD1B3 /* PBXContainerItemProxy */;
+		};
 		195972541B5F30D500382BB1 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = 1959723C1B5F30D500382BB1 /* boggle */;
@@ -306,6 +380,34 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		19320CE31D149AAA001AD1B3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = boggleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.boggleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = boggle;
+			};
+			name = Debug;
+		};
+		19320CE41D149AAA001AD1B3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ANALYZER_NONNULL = YES;
+				INFOPLIST_FILE = boggleUITests/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.localytics.boggleUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_TARGET_NAME = boggle;
+			};
+			name = Release;
+		};
 		1959725A1B5F30D500382BB1 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -460,6 +562,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		19320CE51D149AAA001AD1B3 /* Build configuration list for PBXNativeTarget "boggleUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				19320CE31D149AAA001AD1B3 /* Debug */,
+				19320CE41D149AAA001AD1B3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		195972381B5F30D500382BB1 /* Build configuration list for PBXProject "boggle" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

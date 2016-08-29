@@ -17,9 +17,9 @@ class BoggleDictionary {
     init() {
         // Load the words from dictionary data file
         let path = NSBundle.mainBundle().pathForResource("dictionary", ofType: "txt")
-        let text = String(contentsOfFile: path!, encoding: NSUTF8StringEncoding, error: nil)!
-        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.value), 0)) { // 1
-            split(text) {$0 == "\n"}.map{self.words.insert($0)}
+        let text = try! String(contentsOfFile: path!, encoding: NSUTF8StringEncoding)
+        dispatch_async(dispatch_get_global_queue(Int(QOS_CLASS_USER_INITIATED.rawValue), 0)) { // 1
+            text.characters.split {$0 == "\n"}.map { String($0) }.map{self.words.insert($0)}
             dispatch_async(dispatch_get_main_queue()) {
                 // disable loading
             }

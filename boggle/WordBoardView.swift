@@ -40,7 +40,7 @@ class WordBoard: UIView {
     }
     
     internal func drawCharacters(rect: CGRect) {
-        var board = game.board
+        let board = game.board
         let s = NSString(bytes: board, length: board.count, encoding: NSASCIIStringEncoding)! as String
         // set the text color to dark gray
         let fieldColor = UIColor.darkGrayColor()
@@ -50,9 +50,9 @@ class WordBoard: UIView {
         let textStyle = NSMutableParagraphStyle.defaultParagraphStyle().mutableCopy() as! NSMutableParagraphStyle
         textStyle.alignment = NSTextAlignment.Center
         // set the Obliqueness to 0.1
-        var skew = 0.1
+        let skew = 0.1
         
-        var attributes = [
+        let attributes = [
             NSForegroundColorAttributeName: fieldColor,
             NSObliquenessAttributeName: skew,
             NSFontAttributeName: fieldFont!,
@@ -61,7 +61,7 @@ class WordBoard: UIView {
         
         let dimen = game.dimen
         let size = rect.width / CGFloat(game.dimen)
-        for var i = 0; i < count(s); i++ {
+        for var i = 0; i < s.characters.count; i++ {
             let x = CGFloat(i % dimen) * size
             let y = CGFloat(i / dimen) * size
             s[i].drawInRect(CGRectMake(x, y, size, size), withAttributes: attributes)
@@ -70,12 +70,12 @@ class WordBoard: UIView {
     
     internal func drawSelections(rect: CGRect) {
         // get the graphics context
-        var context = UIGraphicsGetCurrentContext();
+        let context = UIGraphicsGetCurrentContext();
         
         let dimen = game.dimen
         let size = self.frame.width / CGFloat(dimen)
         let selections = game.selections
-        for (index, value) in enumerate(selections) {
+        for (index, value) in selections.enumerate() {
             if index == 0 {
                 CGContextSetLineWidth(context, 5.0) // set the circle outerline-width
                 UIColor.redColor().set() // set the circle outerline-color
@@ -98,7 +98,7 @@ class WordBoard: UIView {
     }
     
     internal func drawSelectionTrace(rect: CGRect) {
-        var context = UIGraphicsGetCurrentContext();
+        let context = UIGraphicsGetCurrentContext();
         CGContextSetStrokeColorWithColor(context, UIColor.grayColor().CGColor)
         CGContextSetLineWidth(context, 2);
         
@@ -172,15 +172,15 @@ class WordBoard: UIView {
                 CGContextMoveToPoint(context, CGFloat(nx) * size + offset, CGFloat(ny) * size + offset)
                 CGContextAddLineToPoint(context, CGFloat(nx) * size + offset - 0.707 * dx, CGFloat(ny) * size + offset - 2.12 * dx)
             default:
-                print("\(nx)\(ny)")
+                print("\(nx)\(ny)", terminator: "")
             }
         }
         
         CGContextStrokePath(context);
     }
     
-    override func touchesBegan(touches: Set<NSObject>, withEvent event: UIEvent) {
-        if let touch = touches.first as? UITouch {
+    override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+        if let touch = touches.first {
             let i = location2Index(touch.locationInView(self))
             game.select(i)
             self.setNeedsDisplay()

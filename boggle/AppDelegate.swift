@@ -15,18 +15,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         application.registerForRemoteNotifications()
-        let notificationType = UIUserNotificationType.Alert | UIUserNotificationType.Badge | UIUserNotificationType.Sound
+        let notificationType: UIUserNotificationType = [UIUserNotificationType.Alert, UIUserNotificationType.Badge, UIUserNotificationType.Sound]
         let settings = UIUserNotificationSettings(forTypes: notificationType, categories: nil)
         application.registerUserNotificationSettings(settings)
         return true
     }
 
     func application(application: UIApplication, didRegisterForRemoteNotificationsWithDeviceToken deviceToken: NSData?) {
-        println("Got token data! \(deviceToken)")
+        print("Got token data! \(deviceToken)")
     }
 
     func application(application: UIApplication, didqFailToRegisterForRemoteNotificationsWithError error: NSError?) {
-        println("Couldn't register: \(error)")
+        print("Couldn't register: \(error)")
     }
 
     func application(application: UIApplication!, didRegisterUserNotificationSettings notificationSettings: UIUserNotificationSettings?) {

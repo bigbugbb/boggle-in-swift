@@ -105,14 +105,14 @@ class BaseBoggleGame: GameProtocol {
         }
         
         board = [CChar](count: dimen * dimen, repeatedValue:65)
-        for (index, value) in enumerate(board) {
+        for (index, value) in board.enumerate() {
             board[index] = value + makeLetter()
         }
     }
     
     func select(i: Int) {
-        if contains(selections, i) {
-            if count(selections) == 1 {
+        if selections.contains(i) {
+            if selections.count == 1 {
                 selections.removeLast()
             } else {
                 if selections.last == i {
@@ -120,7 +120,7 @@ class BaseBoggleGame: GameProtocol {
                     // and try to look up the word in the dictionary.
                     // if the word is found, we are happy, otherwise play the error sound
                     let word = wordFromSelections().lowercaseString
-                    if dict.contains(word) && !contains(foundWords, word) {
+                    if dict.contains(word) && !foundWords.contains(word) {
                         updateScoreForWord(word)
                         foundWords.append(word)
                         selections.removeAll(keepCapacity: true)
@@ -139,13 +139,13 @@ class BaseBoggleGame: GameProtocol {
             if validateSelection(i) {
                 selections.append(i)
             } else {
-                if count(selections) == 1 {
+                if selections.count == 1 {
                     selections.removeLast()
                     selections.append(i)
                 }
             }
         }
-        println(selections)
+        print(selections)
     }
    
     internal func wordFromSelections() -> String {
@@ -189,7 +189,7 @@ class BaseBoggleGame: GameProtocol {
     }
     
     internal func updateScoreForWord(word: String) {
-        score += Int(pow(Double(2), Double(count(word) - 1)))
+        score += Int(pow(Double(2), Double(word.characters.count - 1)))
     }
     
 }

@@ -14,13 +14,13 @@ class GameManager {
     
     var activeGame: BaseBoggleGame?
     
-    func createSingleGame(#dimen: Int) -> SingleBoggleGame {
+    func createSingleGame(dimen dimen: Int) -> SingleBoggleGame {
         let game = SingleBoggleGame(dimen: dimen)
         activeGame = game
         return game
     }
     
-    func createMultiGame(#dimen: Int) -> MultiBoggleGame {
+    func createMultiGame(dimen dimen: Int) -> MultiBoggleGame {
         let game = MultiBoggleGame(dimen: dimen)
         activeGame = game
         return game
